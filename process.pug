@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Process
+  body
+    h1 Results
+    div#results
+    if  placeName !== 'No results found'
+        h2 Place: #{placeName}
+        h3 Zip Codes: #{zips}
+    else 
+    h2 #{placeName}
+
+
+    //- script.
+    //-   document.addEventListener('DOMContentLoaded', function() {
+    //-       const params = new URLSearchParams(window.location.search);
+    //-       const place = params.get('place');
+    //-       const zips = params.get('zips');
+    //-       const error = params.get('error');
+
+    //-       const resultsDiv = document.getElementById('results');
+    //-       if (error) {
+    //-           resultsDiv.textContent = 'No results found.';
+    //-       } else {
+    //-           resultsDiv.innerHTML = `<strong>Place:</strong> ${place}<br><strong>Zip Codes:</strong> ${zips}`;
+    //-       }
+    //-   });
