@@ -8,8 +8,8 @@ const url = require('url');
 
 const app = express();
 const port = process.env.PORT || 3000;
-//const mongoUri = process.env.MONGODB_URI;
-const mongoUri = 'mongodb+srv://gerganayankova:n09uUMwJUn2fOy7L@cluster0.fem1v2s.mongodb.net/?tls=true';
+const mongoUri = process.env.MONGODB_URI;
+//const mongoUri = 'mongodb+srv://gerganayankova:n09uUMwJUn2fOy7L@cluster0.fem1v2s.mongodb.net/?tls=true';
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.set('view engine' , 'pug');
