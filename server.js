@@ -24,7 +24,7 @@ app.post('/process' , async (req, res) => {
     const isZip = !isNaN(input[0]); // checks if the first character is digit
 
    try{
-    const client = new MongoClient(mongoUri);
+    const client = new MongoClient(mongoUri,{tls: true});
     await client.connect();
     console.log("Connected successfully to Mongo DB");
 
